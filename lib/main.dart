@@ -1,11 +1,6 @@
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:html';
-import 'package:buyer_app/counter/counter_cubit.dart';
-import 'package:buyer_app/full_screen_container.dart';
+import 'package:buyer_app/url_input_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'counter/counter_widget.dart';
-import 'my_floating_element.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +16,6 @@ class MyApp extends StatelessWidget {
 
   Future<void> initializeDefault() async {
     FirebaseApp app = await Firebase.initializeApp();
-    assert(app != null);
     print('Initialized default app $app');
   }
 
@@ -33,34 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Project Buyer App'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  final _counter = Counter();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: MyFloatingElement(_counter),
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: FullScreenContainer(
-        context: context,
-        child: CounterWidget(_counter),
-      ),
+      home: UrlInputPage(),
     );
   }
 }
