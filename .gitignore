@@ -118,3 +118,6 @@ coverage/
 # Symbols
 app.*.symbols
 !/dev/ci/**/Gemfile.lock
+
+# Firebase
+.firebase/hosting.YnVpbGRcd2Vi.cache
