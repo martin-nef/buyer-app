@@ -1,4 +1,4 @@
-import 'package:buyer_app/counter.dart';
+import 'package:buyer_app/counter/counter_cubit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
