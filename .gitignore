@@ -1,3 +1,4 @@
+
 # Miscellaneous
 *.class
 *.log
@@ -22,6 +23,7 @@
 **/doc/api/
 .dart_tool/
 .flutter-plugins
+.flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
@@ -68,9 +70,51 @@
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+*.lock
+.classpath
+.project
+.settings/
 
-# Flutter
-.flutter-plugins-dependencies
-**/*.flutter-plugins-dependencies
-lib/generated_plugin_registrant.dart
+# Flutter repo-specific
+/bin/cache/
+/bin/internal/bootstrap.bat
+/bin/internal/bootstrap.sh
+/bin/mingit/
+/dev/benchmarks/mega_gallery/
+/dev/bots/.recipe_deps
+/dev/bots/android_tools/
+/dev/devicelab/ABresults*.json
+/dev/docs/doc/
+/dev/docs/flutter.docs.zip
+/dev/docs/lib/
+/dev/docs/pubspec.yaml
+/dev/integration_tests/**/xcuserdata
+/dev/integration_tests/**/Pods
+/packages/flutter/coverage/
+version
+analysis_benchmark.json
+
+# packages file containing multi-root paths
+.packages.generated
 **/generated_plugin_registrant.dart
+build/
+flutter_*.png
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
+**/android/key.properties
+*.jks
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/ephemeral
+**/ios/Flutter/flutter_export_environment.sh
+
+# macOS
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+
+# Coverage
+coverage/
+
+# Symbols
+app.*.symbols
+!/dev/ci/**/Gemfile.lock
